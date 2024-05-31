@@ -1,0 +1,14 @@
+fastapi[all]
+pydantic
+passlib
+jose
+sqlalchemy
+sqlalchemy-orm
+authlib
+psycopg2-binary
+pytest
+python-jose[cryptography]
+phonenumbers
+pandas
+requests
+motor
