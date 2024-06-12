@@ -18,7 +18,7 @@ async def create_user(user: UserPost, db: MongoDB):
     collection = db.db['users']
     user_dict = await collection.find_one({"cpf": user.cpf})
     if user_dict:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="CPF already exists")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="CPF already exists\n"+str(user_dict))
     
     verify_values(user)
     

@@ -20,23 +20,21 @@ Aqui são as etapas necessárias para configurar e executar o ambiente de desenv
 
 ### Pré-requisitos
 
-- Ter os pacotes:
+- Requisitos:
   - python 3.10.X e inferiores
-  - python-venv
-  - MongoDB
+  - MongoDB Compass
+
   
 ### Instalação e Configuração do Ambiente Virtual
 #### Linux
 ```bash
-python3 -m venv venv
-. venv/bin/active
-pip install r requirements.txt
+virtualenv venv
+./venv/bin/active
+pip install -r requirements.txt
 ```
 #### Windows
 ```bash
-python3 -m venv venv
-. venv/Scripts/active
-pip install r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Configuração do .env seguindo o .env.template (MongoDB)
@@ -47,8 +45,9 @@ DB_NAME=Inventario
 ```
 
 ### rodar no terminal
-````uvicorn main:app --reload````
-
+$env:MONGODB_URI="mongodb://localhost:27017"
+>> $env:DB_NAME="Inventario"
+>> uvicorn main:app --reload
 
 
 ## Documentação
