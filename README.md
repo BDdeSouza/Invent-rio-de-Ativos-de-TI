@@ -45,9 +45,11 @@ DB_NAME=Inventario
 ```
 
 ### rodar no terminal
+```
 $env:MONGODB_URI="mongodb://localhost:27017"
 >> $env:DB_NAME="Inventario"
->> uvicorn main:app --reload
+>> uvicorn main:app --reload 
+```
 
 
 ## Documentação
